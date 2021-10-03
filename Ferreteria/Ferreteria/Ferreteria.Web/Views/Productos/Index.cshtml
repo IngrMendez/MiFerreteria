@@ -18,9 +18,6 @@
             <th>
                 Precio
             </th>
-            <th>
-                Existencia
-            </th>
         </tr>
     </thead>
     @foreach (var producto in Model)
@@ -29,7 +26,6 @@
         <td>@producto.Id</td>
         <td>@producto.Descripcion</td>
         <td>@producto.Precio</td>
-        <td>@producto.Existencia</td>
     </tr>
     }
 </table>

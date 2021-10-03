@@ -79,6 +79,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Ferreteria.BL.Categoria.datasource" />
+    <None Include="Properties\DataSources\Ferreteria.BL.CategoriasBL.datasource" />
+    <None Include="Properties\DataSources\Ferreteria.BL.Contexto.datasource" />
+    <None Include="Properties\DataSources\Ferreteria.BL.Producto.datasource" />
     <None Include="Properties\DataSources\Ferreteria.BL.ProductosBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
