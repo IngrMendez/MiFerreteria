@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listadeProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.listadeProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -43,8 +44,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.listadeProductosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.listadeProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listadeProductosDataGridView = new System.Windows.Forms.DataGridView();
+            this.productoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingNavigator)).BeginInit();
             this.listadeProductosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // listadeProductosBindingNavigator
@@ -94,6 +94,10 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            // 
+            // listadeProductosBindingSource
+            // 
+            this.listadeProductosBindingSource.DataSource = typeof(Ferreteria.BL.Producto);
             // 
             // bindingNavigatorCountItem
             // 
@@ -180,25 +184,21 @@
             this.listadeProductosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.listadeProductosBindingNavigatorSaveItem.Text = "Guardar datos";
             // 
-            // listadeProductosBindingSource
+            // productoDataGridView
             // 
-            this.listadeProductosBindingSource.DataSource = typeof(Ferreteria.BL.Producto);
-            // 
-            // listadeProductosDataGridView
-            // 
-            this.listadeProductosDataGridView.AutoGenerateColumns = false;
-            this.listadeProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listadeProductosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productoDataGridView.AutoGenerateColumns = false;
+            this.productoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewCheckBoxColumn1});
-            this.listadeProductosDataGridView.DataSource = this.listadeProductosBindingSource;
-            this.listadeProductosDataGridView.Location = new System.Drawing.Point(12, 47);
-            this.listadeProductosDataGridView.Name = "listadeProductosDataGridView";
-            this.listadeProductosDataGridView.Size = new System.Drawing.Size(561, 220);
-            this.listadeProductosDataGridView.TabIndex = 1;
+            this.productoDataGridView.DataSource = this.listadeProductosBindingSource;
+            this.productoDataGridView.Location = new System.Drawing.Point(12, 28);
+            this.productoDataGridView.Name = "productoDataGridView";
+            this.productoDataGridView.Size = new System.Drawing.Size(578, 220);
+            this.productoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -235,7 +235,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 346);
-            this.Controls.Add(this.listadeProductosDataGridView);
+            this.Controls.Add(this.productoDataGridView);
             this.Controls.Add(this.listadeProductosBindingNavigator);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -243,7 +243,7 @@
             this.listadeProductosBindingNavigator.ResumeLayout(false);
             this.listadeProductosBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,7 +265,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton listadeProductosBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView listadeProductosDataGridView;
+        private System.Windows.Forms.DataGridView productoDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
